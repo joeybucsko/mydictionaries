@@ -1,6 +1,6 @@
 """
 Process the JSON file named school_data.json. Display only those schools 
-that are part of the ACC, Big 12, Big Ten, Pac-12 and SEC divisons.
+that are part of the ACC, Big 12, Big Ten, and SEC divisons.
 
 Copy that info here:
 
@@ -16,3 +16,13 @@ Display report for all universities that have a total price for in-state student
 
 
 """
+import json
+
+infile = open("schools_data.json", 'r')
+
+schools = json.load(infile)
+
+conference_schools = [372,108,107,130]
+
+for school in schools:
+    school_name = school
